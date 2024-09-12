@@ -4,7 +4,7 @@ public class Tecnico extends Empleado{
 
     public Tecnico(){}
 
-    public Tecnico(String nombre, String id, Departamento departamento){
-        super(nombre, id, departamento);
+    public Tecnico(String nombre, String id, Departamento departamento, Proyecto proyecto){
+        super(nombre, id, departamento, proyecto);
     }
 }

@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Empresa implements ICrudEmpleado, ICrudDepartamento, ICrudProyecto {
+    private String nombre;
     private List<Empleado> listEmpleados = new ArrayList<>();
     private List<Proyecto> listProyectos = new ArrayList<>();
     private List<Departamento> listDepartamentos = new ArrayList<>();
@@ -80,17 +81,16 @@ public class Empresa implements ICrudEmpleado, ICrudDepartamento, ICrudProyecto 
     }
 
     @Override
-    public boolean crearEmpleado(String nombre, String id, Departamento departamento, TipoEmpleado tipoEmpleado){
+    public boolean crearEmpleado(String nombre, String id, Departamento departamento, Proyecto proyecto,TipoEmpleado tipoEmpleado){
         Empleado newEmpleado = verificarTipoEmpleado(tipoEmpleado);
         Empleado empleadoExistente = verificarEmpleado(id);
         if(empleadoExistente == null){
-            if(newEmpleado instanceof Gerente){
-                newEmpleado.setNombre(nombre);
-                newEmpleado.setId(id);
-                newEmpleado.setDepartamento(departamento);
-                listEmpleados.add(newEmpleado);
-                return true;
-            }
+            newEmpleado.setNombre(nombre);
+            newEmpleado.setId(id);
+            newEmpleado.setDepartamento(departamento);
+            newEmpleado.setProyecto(proyecto);
+            listEmpleados.add(newEmpleado);
+            return true;
         }
         return false;
     }
@@ -209,5 +209,13 @@ public class Empresa implements ICrudEmpleado, ICrudDepartamento, ICrudProyecto 
     @Override
     public ArrayList<Proyecto> getProyectos() {
         return (ArrayList<Proyecto>) listProyectos;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

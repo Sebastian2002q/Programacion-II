@@ -11,7 +11,9 @@ public class ModelFactory implements ICrudEmpleado, ICrudDepartamento, ICrudProy
     private static ModelFactory instance;
     private static Empresa empresa;
 
-    private ModelFactory(){}
+    private ModelFactory(){
+        inicializarDatos();
+    }
 
     public static ModelFactory getInstance(){
         if (instance == null){
@@ -21,8 +23,8 @@ public class ModelFactory implements ICrudEmpleado, ICrudDepartamento, ICrudProy
     }
 
     @Override
-    public boolean crearEmpleado(String nombre, String id, Departamento departamento, TipoEmpleado tipoEmpleado) {
-        return empresa.crearEmpleado(nombre, id, departamento, tipoEmpleado);
+    public boolean crearEmpleado(String nombre, String id, Departamento departamento, Proyecto proyecto, TipoEmpleado tipoEmpleado) {
+        return empresa.crearEmpleado(nombre, id, departamento, proyecto,tipoEmpleado);
     }
 
     @Override
@@ -93,5 +95,15 @@ public class ModelFactory implements ICrudEmpleado, ICrudDepartamento, ICrudProy
     @Override
     public ArrayList<Proyecto> getProyectos() {
         return empresa.getProyectos();
+    }
+
+    /**
+     * Inicializa los datos de la empresa, incluyendo empleados, proyectos y despartamentos.
+     *
+     * @return una instancia de Empresa con datos predefinidos.
+     */
+    private static void inicializarDatos() {
+        empresa = new Empresa();
+        empresa.setNombre("EmpresaPiloto");
     }
 }
