@@ -27,18 +27,27 @@ public class Empresa implements ICrudEmpleado {
     }
 
     @Override
-    public boolean crearEmpleado(String nombre, String id, Departamento departamento){
-        Empleado newEmpleado = new Empleado();
+    public boolean crearEmpleado(String nombre, String id, Departamento departamento, TipoEmpleado tipoEmpleado){
+        Empleado newEmpleado = verificarTipoEmpleado(tipoEmpleado);
         Empleado empleadoExistente = verificarEmpleado(id);
 
         if(empleadoExistente == null){
-            newEmpleado.setNombre(nombre);
-            newEmpleado.setId(id);
-            newEmpleado.setDepartamento(departamento);
-            listEmpleados.add(newEmpleado);
-            return true;
+            if(newEmpleado instanceof Gerente){
+                newEmpleado.setNombre(nombre);
+                newEmpleado.setId(id);
+                newEmpleado.setDepartamento(departamento);
+                listEmpleados.add(newEmpleado);
+                return true;
+            }
         }
         return false;
+    }
+
+    private Empleado verificarTipoEmpleado(TipoEmpleado tipoEmpleado) {
+        if(tipoEmpleado == TipoEmpleado.GERENTE){
+            return new Gerente();
+        }
+        return new Tecnico();
     }
 
     @Override

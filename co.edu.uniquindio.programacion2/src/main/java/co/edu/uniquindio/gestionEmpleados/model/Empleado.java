@@ -1,6 +1,6 @@
 package co.edu.uniquindio.gestionEmpleados.model;
 
-public class Empleado {
+public abstract class Empleado {
     private String nombre;
     private String id;
     private Departamento departamento;
