@@ -1,4 +1,4 @@
-package co.edu.uniquindio.empresaTransporte.factory;
+package co.edu.uniquindio.gestionEmpleados.factory;
 
 public class ModelFactory {
     private static ModelFactory instance;
