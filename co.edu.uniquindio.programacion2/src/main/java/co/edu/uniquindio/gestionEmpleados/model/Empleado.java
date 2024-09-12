@@ -51,4 +51,5 @@ public abstract class Empleado {
     public String toString() {
         return nombre + " " + id + " " + departamento + " " + proyecto;
     }
+
 }

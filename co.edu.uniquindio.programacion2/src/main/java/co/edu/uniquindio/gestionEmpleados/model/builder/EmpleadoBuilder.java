@@ -2,7 +2,6 @@ package co.edu.uniquindio.gestionEmpleados.model.builder;
 
 import co.edu.uniquindio.gestionEmpleados.model.Departamento;
 import co.edu.uniquindio.gestionEmpleados.model.Empleado;
-import co.edu.uniquindio.gestionEmpleados.model.Empresa;
 import co.edu.uniquindio.gestionEmpleados.model.Proyecto;
 
 public abstract class EmpleadoBuilder<T extends EmpleadoBuilder<T>>{
