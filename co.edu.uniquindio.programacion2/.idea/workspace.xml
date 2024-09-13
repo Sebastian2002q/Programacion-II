@@ -7,6 +7,11 @@
     <list default="true" id="1db34bf9-c0cb-47ef-aeeb-ea9159e8899a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/MainGestionEmpleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/MainGestionEmpleados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/factory/ModelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/factory/ModelFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Departamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Departamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Proyecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Proyecto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/services/ICrudProyecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/services/ICrudProyecto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +104,9 @@
       <workItem from="1726162727036" duration="4014000" />
       <workItem from="1726177871988" duration="4478000" />
       <workItem from="1726195444573" duration="2132000" />
+      <workItem from="1726198141814" duration="171000" />
+      <workItem from="1726245807664" duration="1535000" />
+      <workItem from="1726247391774" duration="603000" />
     </task>
     <servers />
   </component>

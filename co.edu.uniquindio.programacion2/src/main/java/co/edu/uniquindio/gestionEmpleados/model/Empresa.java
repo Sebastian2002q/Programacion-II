@@ -2,16 +2,18 @@ package co.edu.uniquindio.gestionEmpleados.model;
 
 import co.edu.uniquindio.gestionEmpleados.services.ICrudDepartamento;
 import co.edu.uniquindio.gestionEmpleados.services.ICrudEmpleado;
+import co.edu.uniquindio.gestionEmpleados.services.ICrudPresupuesto;
 import co.edu.uniquindio.gestionEmpleados.services.ICrudProyecto;
 
 import java.util.List;
 import java.util.ArrayList;
 
-public class Empresa implements ICrudEmpleado, ICrudDepartamento, ICrudProyecto {
+public class Empresa implements ICrudEmpleado, ICrudDepartamento,  ICrudProyecto, ICrudPresupuesto {
     private String nombre;
     private List<Empleado> listEmpleados = new ArrayList<>();
     private List<Proyecto> listProyectos = new ArrayList<>();
     private List<Departamento> listDepartamentos = new ArrayList<>();
+    private List<Presupuesto> listPresupuestos = new ArrayList<>();
 
     public Empresa(){
     }
@@ -65,6 +67,23 @@ public class Empresa implements ICrudEmpleado, ICrudDepartamento, ICrudProyecto 
             }
         }
         return proyectoExistente;
+    }
+
+    /**
+     * Verifica si un presupuesto ya existe
+     *
+     * @param idPresupuesto del presupuesto a verificar
+     * @return un presupuesto encontrado o null si no existe
+     */
+    private Presupuesto verificarPresupuesto(String idPresupuesto) {
+        Presupuesto presupuestoExistente = null;
+        for(Presupuesto presupuesto : listPresupuestos){
+            if(presupuesto.getIdPresupuesto().equals(idPresupuesto)){
+                presupuestoExistente = presupuesto;
+                break;
+            }
+        }
+        return presupuestoExistente;
     }
 
     /**
@@ -168,18 +187,18 @@ public class Empresa implements ICrudEmpleado, ICrudDepartamento, ICrudProyecto 
     }
 
     @Override
-    public boolean crearProyecto(String nombre, String codigo) {
+    public boolean crearProyecto(String nombre, String codigo, Presupuesto presupuestoAsociado) {
         Proyecto newProyecto = new Proyecto();
         Proyecto proyectoExistente = verificarProyecto(codigo);
         if(proyectoExistente == null){
             newProyecto.setNombre(nombre);
             newProyecto.setCodigo(codigo);
+            newProyecto.setPresupuestoAsociado(presupuestoAsociado);
             listProyectos.add(newProyecto);
             return true;
         }
         return false;
     }
-
 
     @Override
     public boolean eliminarProyecto(String codigo) {
@@ -217,5 +236,70 @@ public class Empresa implements ICrudEmpleado, ICrudDepartamento, ICrudProyecto 
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    @Override
+    public boolean crearPresupuesto(String idPresupuesto, double valor, String descripcion, Estado estado, Proyecto proyectoAsociado) {
+        Presupuesto newPresupuesto = new Presupuesto();
+        Presupuesto presupuestoExistente = verificarPresupuesto(idPresupuesto);
+        if(presupuestoExistente == null){
+            newPresupuesto.setIdPresupuesto(idPresupuesto);
+            newPresupuesto.setValor(valor);
+            newPresupuesto.setDescripcion(descripcion);
+            newPresupuesto.setEstado(estado);
+            newPresupuesto.setProyectoAsociado(proyectoAsociado);
+            listPresupuestos.add(newPresupuesto);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean eliminarPresupuesto(String idPresupuesto) {
+        Presupuesto presupuesto = verificarPresupuesto(idPresupuesto);
+        if(presupuesto != null){
+            listPresupuestos.remove(presupuesto);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean modificarPresupuesto(String idPresupuesto, double valor, String descripcion, Estado estado, Proyecto proyectoAsociado) {
+        Presupuesto presupuesto = verificarPresupuesto(idPresupuesto);
+        if(presupuesto != null){
+            presupuesto.setValor(valor);
+            presupuesto.setEstado(estado);
+            presupuesto.setDescripcion(descripcion);
+            presupuesto.setProyectoAsociado(proyectoAsociado);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Presupuesto getPresupuesto(String idPresupuesto) {
+        return verificarPresupuesto(idPresupuesto);
+    }
+
+    @Override
+    public ArrayList<Presupuesto> getPresupuestos() {
+        return (ArrayList<Presupuesto>) listPresupuestos;
+    }
+
+    /**
+     * Devuelve el numero de presupuestos en un estado dado
+     *
+     * @param estado requerido
+     * @return el numero de presupuestos
+     */
+    public int presupuestosPorEstado(Estado estado){
+        int numPresupuestos = 0;
+        for (Presupuesto presupuesto : listPresupuestos){
+            if(presupuesto.getEstado().equals(estado)){
+                numPresupuestos++;
+            }
+        }
+        return numPresupuestos;
     }
 }

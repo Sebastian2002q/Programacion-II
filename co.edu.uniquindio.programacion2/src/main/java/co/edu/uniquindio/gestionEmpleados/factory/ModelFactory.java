@@ -3,11 +3,12 @@ package co.edu.uniquindio.gestionEmpleados.factory;
 import co.edu.uniquindio.gestionEmpleados.model.*;
 import co.edu.uniquindio.gestionEmpleados.services.ICrudDepartamento;
 import co.edu.uniquindio.gestionEmpleados.services.ICrudEmpleado;
+import co.edu.uniquindio.gestionEmpleados.services.ICrudPresupuesto;
 import co.edu.uniquindio.gestionEmpleados.services.ICrudProyecto;
 
 import java.util.ArrayList;
 
-public class ModelFactory implements ICrudEmpleado, ICrudDepartamento, ICrudProyecto {
+public class ModelFactory implements ICrudEmpleado, ICrudDepartamento, ICrudProyecto, ICrudPresupuesto {
     private static ModelFactory instance;
     private static Empresa empresa;
 
@@ -73,8 +74,8 @@ public class ModelFactory implements ICrudEmpleado, ICrudDepartamento, ICrudProy
     }
 
     @Override
-    public boolean crearProyecto(String nombre, String codigo) {
-        return empresa.crearProyecto(nombre, codigo);
+    public boolean crearProyecto(String nombre, String codigo, Presupuesto presupuestoAsociado) {
+        return empresa.crearProyecto(nombre, codigo, presupuestoAsociado);
     }
 
     @Override
@@ -97,6 +98,31 @@ public class ModelFactory implements ICrudEmpleado, ICrudDepartamento, ICrudProy
         return empresa.getProyectos();
     }
 
+    @Override
+    public boolean crearPresupuesto(String idPresupuesto, double valor, String descripcion, Estado estado, Proyecto proyectoAsociado) {
+        return empresa.crearPresupuesto(idPresupuesto,valor,descripcion,estado,proyectoAsociado);
+    }
+
+    @Override
+    public boolean eliminarPresupuesto(String idPresupuesto) {
+        return empresa.eliminarPresupuesto(idPresupuesto);
+    }
+
+    @Override
+    public boolean modificarPresupuesto(String idPresupuesto, double valor, String descripcion, Estado estado, Proyecto proyectoAsociado) {
+        return empresa.modificarPresupuesto(idPresupuesto,valor,descripcion,estado,proyectoAsociado);
+    }
+
+    @Override
+    public Presupuesto getPresupuesto(String idPresupuesto) {
+        return empresa.getPresupuesto(idPresupuesto);
+    }
+
+    @Override
+    public ArrayList<Presupuesto> getPresupuestos() {
+        return empresa.getPresupuestos();
+    }
+
     /**
      * Inicializa los datos de la empresa, incluyendo empleados, proyectos y despartamentos.
      *
@@ -106,11 +132,24 @@ public class ModelFactory implements ICrudEmpleado, ICrudDepartamento, ICrudProy
         empresa = new Empresa();
         empresa.setNombre("EmpresaPiloto");
 
+        //Presupuestos
+        Presupuesto presupuesto1 = new Presupuesto("0000",1111,"Presupuesto1",Estado.DISPONIBLE,null);
+        Presupuesto presupuesto2 = new Presupuesto("0001",2222,"Presupuesto2",Estado.NO_DISPONIBLE,null);
+        Presupuesto presupuesto3 = new Presupuesto("0002",3333,"Presupuesto3",Estado.RESERVADO,null);
+        Presupuesto presupuesto4 = new Presupuesto("0003",4444,"Presupuesto4",Estado.DISPONIBLE,null);
+
         //Proyectos
-        Proyecto proyecto1 = new Proyecto("Proyecto 1", "0000");
-        Proyecto proyecto2 = new Proyecto("Proyecto 2", "0001");
-        Proyecto proyecto3 = new Proyecto("Proyecto 3", "0002");
-        Proyecto proyecto4 = new Proyecto("Proyecto 4", "0003");
+        Proyecto proyecto1 = new Proyecto("Proyecto 1", "0000",presupuesto1);
+        Proyecto proyecto2 = new Proyecto("Proyecto 2", "0001",presupuesto2);
+        Proyecto proyecto3 = new Proyecto("Proyecto 3", "0002",presupuesto3);
+        Proyecto proyecto4 = new Proyecto("Proyecto 4", "0003",presupuesto4);
+        Proyecto proyecto5 = (Proyecto)proyecto1.clone();
+
+        //Asignacion de proyectos a presupuesto
+        presupuesto1.setProyectoAsociado(proyecto1);
+        presupuesto2.setProyectoAsociado(proyecto2);
+        presupuesto3.setProyectoAsociado(proyecto3);
+        presupuesto4.setProyectoAsociado(proyecto4);
 
         //Departamentos
         Departamento departamento1 = new Departamento("Departamento 1", "0000");
@@ -147,6 +186,10 @@ public class ModelFactory implements ICrudEmpleado, ICrudDepartamento, ICrudProy
         empresa.getEmpleados().add(tecnico2);
         empresa.getEmpleados().add(tecnico3);
         empresa.getEmpleados().add(tecnico4);
+        empresa.getPresupuestos().add(presupuesto1);
+        empresa.getPresupuestos().add(presupuesto2);
+        empresa.getPresupuestos().add(presupuesto3);
+        empresa.getPresupuestos().add(presupuesto4);
 
         //Asignacion de empleados a departamento
         departamento1.registrarEmpleado(gerente1);
@@ -167,5 +210,10 @@ public class ModelFactory implements ICrudEmpleado, ICrudDepartamento, ICrudProy
         proyecto3.registrarEmpleado(tecnico3);
         proyecto4.registrarEmpleado(gerente4);
         proyecto4.registrarEmpleado(tecnico4);
+
+    }
+
+    public int presupuestosPorEstado(Estado estado){
+        return empresa.presupuestosPorEstado(estado);
     }
 }

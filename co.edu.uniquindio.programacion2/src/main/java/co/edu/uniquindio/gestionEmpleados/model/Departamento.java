@@ -1,6 +1,6 @@
 package co.edu.uniquindio.gestionEmpleados.model;
 
-import co.edu.uniquindio.gestionEmpleados.services.ICrudEmpleado;
+import co.edu.uniquindio.gestionEmpleados.model.builder.DepartamentoBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +17,9 @@ public class Departamento {
         this.nombre = nombre;
     }
 
+    public static DepartamentoBuilder builder(){
+        return new DepartamentoBuilder();
+    }
     public String getNombre() {
         return nombre;
     }

@@ -1,20 +1,28 @@
 package co.edu.uniquindio.gestionEmpleados.model;
 
+import co.edu.uniquindio.gestionEmpleados.model.builder.ProyectoBuilder;
+import co.edu.uniquindio.gestionEmpleados.services.IPrototype;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Proyecto {
+public class Proyecto implements IPrototype {
     private String nombre;
     private String codigo;
     private List<Empleado> listEmpleados = new ArrayList<Empleado>();
+    private Presupuesto presupuestoAsociado;
 
     public Proyecto() {}
 
-    public Proyecto(String nombre, String codigo) {
+    public Proyecto(String nombre, String codigo, Presupuesto presupuestoAsociado) {
         this.nombre = nombre;
         this.codigo = codigo;
+        this.presupuestoAsociado = presupuestoAsociado;
     }
 
+    public static ProyectoBuilder builder(){
+        return new ProyectoBuilder();
+    }
     public String getNombre() {
         return nombre;
     }
@@ -31,6 +39,13 @@ public class Proyecto {
         this.codigo = codigo;
     }
 
+    public Presupuesto getPresupuestoAsociado() {
+        return presupuestoAsociado;
+    }
+
+    public void setPresupuestoAsociado(Presupuesto presupuestoAsociado) {
+        this.presupuestoAsociado = presupuestoAsociado;
+    }
 
     /**
      * Verifica si un empleado ya existe
@@ -86,5 +101,16 @@ public class Proyecto {
                 ", codigo='" + codigo + '\'' +
                 ", listEmpleados=" + listEmpleados +
                 '}';
+    }
+
+    @Override
+    public IPrototype clone() {
+        Proyecto proyecto = null;
+        try {
+            proyecto = (Proyecto) super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return proyecto;
     }
 }
