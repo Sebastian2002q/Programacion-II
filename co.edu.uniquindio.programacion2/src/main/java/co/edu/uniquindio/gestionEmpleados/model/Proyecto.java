@@ -31,6 +31,13 @@ public class Proyecto {
         this.codigo = codigo;
     }
 
+
+    /**
+     * Verifica si un empleado ya existe
+     *
+     * @param id del empleado a verificar
+     * @return un empleado encontrado o null si no existe
+     */
     private Empleado verificarEmpleado(String id) {
         Empleado empleadoExistente = null;
         for (Empleado empleado : listEmpleados) {
@@ -42,6 +49,11 @@ public class Proyecto {
         return empleadoExistente;
     }
 
+    /**
+     * Registra un empleado a la lista de empleados
+     *
+     * @param empleado a registrar
+     */
     public void registrarEmpleado(Empleado empleado) {
         Empleado newEmpleado = verificarEmpleado(empleado.getId());
 
@@ -50,6 +62,11 @@ public class Proyecto {
         }
     }
 
+    /**
+     * Elimina un empleado de la lista de empleados
+     *
+     * @param empleado a eliminar
+     */
     public void eliminarEmpleado(Empleado empleado) {
         Empleado newEmpleado = verificarEmpleado(empleado.getId());
 
@@ -60,5 +77,14 @@ public class Proyecto {
 
     public ArrayList<Empleado> getEmpleados() {
         return (ArrayList<Empleado>) listEmpleados;
+    }
+
+    @Override
+    public String toString() {
+        return "Proyecto{" +
+                "nombre='" + nombre + '\'' +
+                ", codigo='" + codigo + '\'' +
+                ", listEmpleados=" + listEmpleados +
+                '}';
     }
 }

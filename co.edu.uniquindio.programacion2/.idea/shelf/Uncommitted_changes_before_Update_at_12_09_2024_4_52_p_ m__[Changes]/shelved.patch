@@ -1,0 +1,75 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1db34bf9-c0cb-47ef-aeeb-ea9159e8899a\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/MainGestionEmpleados.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/MainGestionEmpleados.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/factory/ModelFactory.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/factory/ModelFactory.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Empleado.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Empleado.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Empresa.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Empresa.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Gerente.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Gerente.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Tecnico.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Tecnico.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/services/ICrudEmpleado.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/services/ICrudEmpleado.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Enum\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Sebastian2002q&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/Sebastian2002q/Programacion-II.git&quot;,\r\n    &quot;accountId&quot;: &quot;5ce17e8f-c387-4c49-9629-30849ee6ddbb&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2l3iVse9MhMfc9BTrEfQn63mgUF\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Application.MainGestionEmpleados.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/sebit/OneDrive/Escritorio/Progra 2/Programacion-II/co.edu.uniquindio.programacion2\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"onboarding.tips.debug.path\": \"C:/Users/Sebastian/Desktop/Programacion II/co.edu.uniquindio.programacion2/src/main/java/co/edu/uniquindio/Main.java\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"preferences.lookFeel\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1db34bf9-c0cb-47ef-aeeb-ea9159e8899a\" name=\"Changes\" comment=\"\" />\r\n      <created>1724415196335</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1724415196335</updated>\r\n      <workItem from=\"1724415197865\" duration=\"1411000\" />\r\n      <workItem from=\"1724418567804\" duration=\"1341000\" />\r\n      <workItem from=\"1724859372856\" duration=\"57000\" />\r\n      <workItem from=\"1725022367666\" duration=\"3325000\" />\r\n      <workItem from=\"1725458786847\" duration=\"4631000\" />\r\n      <workItem from=\"1726013643424\" duration=\"1114000\" />\r\n      <workItem from=\"1726063924979\" duration=\"3184000\" />\r\n      <workItem from=\"1726152212633\" duration=\"3580000\" />\r\n      <workItem from=\"1726156050783\" duration=\"203000\" />\r\n      <workItem from=\"1726156790882\" duration=\"4692000\" />\r\n      <workItem from=\"1726162727036\" duration=\"4014000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/co/edu/uniquindio/Main.java</url>\r\n          <line>13</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 353466c866d4bf44e72b323230b49cddb4e2244a)
++++ b/.idea/workspace.xml	(date 1726167269656)
+@@ -4,17 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="1db34bf9-c0cb-47ef-aeeb-ea9159e8899a" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/MainGestionEmpleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/MainGestionEmpleados.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/factory/ModelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/factory/ModelFactory.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Empleado.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Empresa.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Gerente.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Tecnico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/model/Tecnico.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/services/ICrudEmpleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/gestionEmpleados/services/ICrudEmpleado.java" afterDir="false" />
+-    </list>
++    <list default="true" id="1db34bf9-c0cb-47ef-aeeb-ea9159e8899a" name="Changes" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -55,26 +45,26 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.MainGestionEmpleados.executor": "Run",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "main",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/Users/sebit/OneDrive/Escritorio/Progra 2/Programacion-II/co.edu.uniquindio.programacion2",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "onboarding.tips.debug.path": "C:/Users/Sebastian/Desktop/Programacion II/co.edu.uniquindio.programacion2/src/main/java/co/edu/uniquindio/Main.java",
+-    "project.structure.last.edited": "Project",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "preferences.lookFeel",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.MainGestionEmpleados.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebit/OneDrive/Escritorio/Progra 2/Programacion-II/co.edu.uniquindio.programacion2&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Sebastian/Desktop/Programacion II/co.edu.uniquindio.programacion2/src/main/java/co/edu/uniquindio/Main.java&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>

@@ -1,5 +1,5 @@
 package co.edu.uniquindio.gestionEmpleados.services;
 
 public interface IContribuyente {
-    void Contribuir();
+    String Contribuir();
 }
